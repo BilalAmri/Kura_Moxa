@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2011, 2016 Eurotech and/or its affiliates
+
+     All rights reserved. This program and the accompanying materials
+     are made available under the terms of the Eclipse Public License v1.0
+     which accompanies this distribution, and is available at
+     http://www.eclipse.org/legal/epl-v10.html
+
+    Contributors:
+      Eurotech
+
+-->
+<MetaData xmlns="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="en_us">
+    <OCD id="fr.uha.ensisa.atelierMeca.moxa.Moxa"
+         name="Moxa" 
+         description="This is a simulator for an heater gateway application. Its configuration options will be passed down the smart heater. ">
+        
+        <Icon resource="OSGI-INF/moxa.jpg" size="36"/>
+
+        <AD id="Demeter.String"
+            name="Demeter.String"
+            type="String"
+            cardinality="0"
+            required="true"
+            default="10.3.10.160"
+            description="String configuration parameter"/>
+            
+         <AD id="HAAS_VF2_5AXES.String"
+            name="HAAS_VF2_5AXES.String"
+            type="String"
+            cardinality="0"
+            required="true"
+            default="10.3.10.162"
+            description="String configuration parameter"/>
+            
+           <AD id="HAAS_VF2_3AXES.String"
+            name="HAAS_VF2_3AXES.String"
+            type="String"
+            cardinality="0"
+            required="true"
+            default=""
+            description="String configuration parameter"/>
+            
+           <AD id="HAAS_SL20.String"
+            name="HAAS_SL20.String"
+            type="String"
+            cardinality="0"
+            required="true"
+            default=""
+            description="String configuration parameter"/>
+            
+            <AD id="Time.second.integer"
+            name="Time.second.integer"
+            type="Integer"
+            cardinality="0"
+            required="true"
+            default="30"
+            description="Integer configuration parameter"/>
+            
+         <AD id="publish.rate"  
+            name="publish.rate"
+            type="Integer"
+            cardinality="0" 
+            required="true"
+            default="2"
+            min="1" 
+            description="Default message publishing rate in seconds (min 1)."/>
+
+        <AD id="publish.Demeter"  
+            name="publish.Demeter"
+            type="String"
+            cardinality="0" 
+            required="true"
+            default="DEMETER/State" 
+            description="Default semantic topic to publish the messages to."/>
+            
+            <AD id="publish.Haas_VF2_5AXES"  
+            name="publish.Haas_VF2_5AXES"
+            type="String"
+            cardinality="0" 
+            required="true"
+            default="HAAS_VF2_5AXES/State" 
+            description="Default semantic topic to publish the messages to."/>
+            
+           
+            <AD id="publish.Haas_VF2_3AXES"  
+            name="publish.Haas_VF2_3AXES"
+            type="String"
+            cardinality="0" 
+            required="true"
+            default="HAAS_VF2_3AXES/State" 
+            description="Default semantic topic to publish the messages to."/>
+            
+            <AD id="publish.Haas_SL20"  
+            name="publish.Haas_SL20"
+            type="String"
+            cardinality="0" 
+            required="true"
+            default="Haas_SL20/State" 
+            description="Default semantic topic to publish the messages to."/>
+        
+        <AD id="publish.qos"  
+            name="publish.qos"
+            type="Integer"
+            cardinality="0" 
+            required="true"
+            default="0" 
+            description="Default QoS to publish the messages with.">
+      
+        </AD>
+
+        <AD id="publish.retain"  
+            name="publish.retain"
+            type="Boolean"
+            cardinality="0" 
+            required="true"
+            default="false" 
+            description="Default retaing flag for the published messages."/>
+    </OCD>
+    
+    <Designate pid="fr.uha.ensisa.atelierMeca.moxa.Moxa">
+        <Object ocdref="fr.uha.ensisa.atelierMeca.moxa.Moxa"/>
+    </Designate>
+</MetaData>

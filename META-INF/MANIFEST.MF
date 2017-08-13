@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: fr.uha.ensisa.atelierMeca.moxa
+Bundle-SymbolicName: fr.uha.ensisa.atelierMeca.moxa;singleton:=true
+Bundle-Version: 1.0.100
+Bundle-Vendor: Eclipse Kura
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Service-Component: OSGI-INF/*.xml
+Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.kura.cloud; version="[1.0,2.0)",
+ org.eclipse.kura.configuration; version="[1.0,2.0)",
+ org.eclipse.kura.message; version="[1.0,2.0)",
+ org.osgi.service.component;version="1.2.0",
+ org.slf4j;version="1.6.4"
+Bundle-ClassPath: .,
+ lib/jamod-1.2-SNAPSHOT.jar
+Export-Package: fr.uha.ensisa.atelierMeca.moxa
